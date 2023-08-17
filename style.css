@@ -1,22 +1,30 @@
 .ball {
     background-color: black;
     display: flex;
-    max-width: 300px;
-    min-height: 300px;
+    max-width: 20rem;
+    min-height: 20rem;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    color: white;
 }
 
-    .ball span:not(.big-8) {
+    .big-8 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10rem;
+        height: 10rem;
+        font-size: 8rem;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+    }
+
+    .answer {
         padding: 1rem;
         border-radius: 1rem;
         font-weight: bold;
-    }
-
-    .big-8 {
-        font-size: 10rem;
+        color: white;
     }
 
     .ball .answer-affirmative {

@@ -46,7 +46,7 @@ function updateView(content) {
 function getAnswerView() {
     let answer = getAnswer();
     let html = /*html*/ `
-        <span class="answer-${answer.currentAnswerType}">${answer.currentAnswer}</span>
+        <span class="answer answer-${answer.currentAnswerType}">${answer.currentAnswer}</span>
     `;
     updateView(html);
 }
