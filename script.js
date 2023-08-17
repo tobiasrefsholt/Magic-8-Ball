@@ -1,4 +1,5 @@
 const appContainer = document.getElementById("app");
+let previousAnswer;
 const answers = {
     "affirmative": [
         "It is certain",
@@ -26,8 +27,7 @@ const answers = {
         "Outlook not so good",
         "Very doubtful"
     ]
-}
-let previousAnswer;
+};
 
 clearBallView();
 
@@ -77,12 +77,12 @@ function getAnswer() {
     currentAnswer = answers[currentAnswerType][Math.floor(Math.random() * answers[currentAnswerType].length)];
     
     if (currentAnswer == previousAnswer) {
-        return getAnswer()
+        return getAnswer();
     }
     
+    // Definer previousAnswer, slik at man kan sjekke om samme svaret kommer to ganger på rad
     previousAnswer = currentAnswer;
 
     // Returner array med currentAnswer og currentAnswerType(Kun for css styling)
-    return {currentAnswer, currentAnswerType}
-    /* updateView(); */
+    return {currentAnswer, currentAnswerType};
 }
